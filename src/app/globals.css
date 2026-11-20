@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #F8FAFC;
+    --foreground: #0F172A;
+    
+    --card: #FFFFFF;
+    --card-foreground: #0F172A;
+    
+    --border: #E2E8F0;
+    
+    --primary: #E11D2A;
+    --primary-foreground: #FFFFFF;
+
+    --muted: #F1F5F9;
+    --muted-foreground: #475569;
+  }
+
+  .dark {
+    --background: #0B0F19;
+    --foreground: #F8FAFC;
+    
+    --card: #131B2E;
+    --card-foreground: #F8FAFC;
+    
+    --border: #1E293B;
+    
+    --primary: #EF4444;
+    --primary-foreground: #FFFFFF;
+
+    --muted: #1E293B;
+    --muted-foreground: #94A3B8;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-[var(--border)];
+  }
+  html, body {
+    @apply bg-[var(--background)] text-[var(--foreground)] antialiased;
+    overflow-x: clip;
+    max-width: 100vw;
+    width: 100%;
+  }
+}
+
+/* Sleek modern custom scrollbars (replaces Windows 98 clunky scrollbar) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.65);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.35) transparent;
+}
+
+/* =========================================================
+   Universal Dark Mode Overrides for Slate & White Layouts
+   Enables instant, seamless dark/light switching across
+   the Owner Portal, Admin, POS, and Modals
+   ========================================================= */
+html.dark,
+.dark body {
+  background-color: #0B0F19 !important;
+  color: #F8FAFC !important;
+}
+
+.dark .bg-slate-50 {
+  background-color: #0B0F19 !important;
+}
+
+.dark .bg-white {
+  background-color: #111827 !important;
+}
+
+.dark .bg-slate-100 {
+  background-color: #1E293B !important;
+}
+
+.dark .bg-slate-200 {
+  background-color: #334155 !important;
+}
+
+.dark .border-slate-100 {
+  border-color: #1E293B !important;
+}
+
+.dark .border-slate-200 {
+  border-color: #1F2937 !important;
+}
+
+.dark .border-slate-300 {
+  border-color: #374151 !important;
+}
+
+.dark .text-slate-900,
+.dark .text-slate-800 {
+  color: #F8FAFC !important;
+}
+
+.dark .text-slate-700 {
+  color: #E2E8F0 !important;
+}
+
+.dark .text-slate-600 {
+  color: #CBD5E1 !important;
+}
+
+.dark .text-slate-500 {
+  color: #94A3B8 !important;
+}
+
+.dark .text-slate-400 {
+  color: #64748B !important;
+}
+
+.dark .hover\:bg-slate-50:hover {
+  background-color: #1E293B !important;
+}
+
+.dark .hover\:bg-slate-100:hover {
+  background-color: #374151 !important;
+}
+
+.dark .hover\:bg-slate-200:hover {
+  background-color: #475569 !important;
+}
+
+.dark input:not([type="checkbox"]):not([type="radio"]),
+.dark select,
+.dark textarea {
+  color: #F8FAFC;
+}
+
+.dark input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+/* Hide scrollbar utility for sleek horizontal tab and pill rows */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

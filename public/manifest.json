@@ -1,0 +1,53 @@
+{
+  "name": "Muchachos POS",
+  "short_name": "Muchachos",
+  "description": "Muchachos - An Oasis Of Taste | Cloud POS, Kitchen Display & Management Ledger",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0F172A",
+  "theme_color": "#E11D2A",
+  "categories": ["business", "food", "productivity"],
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "POS Terminal",
+      "short_name": "POS",
+      "url": "/",
+      "description": "Open the cashier point-of-sale terminal"
+    },
+    {
+      "name": "Kitchen Display",
+      "short_name": "KDS",
+      "url": "/kds",
+      "description": "Open the kitchen display screen"
+    },
+    {
+      "name": "Owner Admin",
+      "short_name": "Admin",
+      "url": "/admin",
+      "description": "Open the owner admin panel"
+    }
+  ]
+}
